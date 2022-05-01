@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+    <style type="text/css">
+        body {        
+            font-size: 60px;
+            font-family: Lato;
+        }
+        div[id*="container"] {
+            display: flex;
+            height: 350px;
+            border: solid 1px;
+            margin: .1em;
+        }
+        #container {
+            /*height: 350px; /* or completely remove; */
+            flex-direction: column; /* or row; */
+            flex-wrap: wrap; /* or wrap-reverse; */
+            justify-content: flex-start;
+        }
+        #container2 {
+            flex-direction: row; /* or column; */
+            flex-wrap: wrap; /* or wrap-reverse; */
+            justify-content: flex-start;
+            align-items: stretch;
+            align-content: stretch;
+        }
+        #container3 {
+            height: 200px;
+        }
+        #container3 .box {
+            flex: 1 0 0%;
+        }
+        #container3 > .box1 {
+            flex: 2 1 0;
+        }
+        #container3 > .box4 {
+            flex: 3 1 0;
+        }
+        #container3 > .box3 {
+            order: 3;
+        }
+        #container3 > .box2 {
+            order: 2;
+        }
+        .box {
+            width: 80px;
+            text-align: center;
+            color: white;
+        }
+        .box11 {
+            align-self: flex-end;
+            flex: 2 1 auto;
+        }
+              
+    </style>
+
+</head>
+<body>
+
+    <div id="container">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+        <div class="box box6">6</div>
+        <div class="box box7">7</div>
+        <div class="box box8">8</div>
+        <div class="box box9">9</div>
+        <div class="box box10">10</div>
+    </div>
+    <div id="container2">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+        <div class="box box6">6</div>
+        <div class="box box7">7</div>
+        <div class="box box8">8</div>
+        <div class="box box9">9</div>
+        <div class="box box10">10</div>
+    </div>
+    <div id="container3">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+    </div>
+    
+</body>
+
+<script type="text/javascript">
+
+    const boxes = document.getElementsByClassName("box");
+    const colors = ["crimson", "orange", "lightgreen", "skyblue", "mediumorchid"];
+    let templen = 0;
+
+    for (let box of boxes){
+        // let random_color = colors[Math.floor(Math.random() * colors.length)];
+        let random_color = colors[templen];
+        box.style.backgroundColor = random_color;
+        templen++;
+        if (templen == colors.length) templen = 0;
+    }
+    
+</script>
+
+</html>

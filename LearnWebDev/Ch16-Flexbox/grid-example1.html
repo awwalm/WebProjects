@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Example</title>
+
+    <style type="text/css">
+        html {
+            font-family: Lato;
+            color: white;
+        }
+        #layout {
+            display: grid;
+            grid-template-rows: [header-start] /*row HEIGHT*/100px [content-start] 400px [footer-start] 100px;
+            grid-template-columns: [ads] /*column WIDTH*/200px [main] 1fr [links] 200px;
+        }
+        #layout2 {
+            display: grid;
+            grid-template-rows: 100px 300px;
+            grid-template-columns: 1fr 2fr 1fr;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="layout">
+        <div class="numdivs" id="one">One</div>
+        <div class="numdivs" id="two">Two</div>
+        <div class="numdivs" id="three">Three</div>
+        <div class="numdivs" id="four">Four</div>
+        <div class="numdivs" id="five">Five</div>
+    </div>
+
+    <div id="layout2">
+        <div class="numdivs">One</div>
+        <div class="numdivs">Two</div>
+        <div class="numdivs">Three</div>
+        <div class="numdivs">Four</div>
+        <div class="numdivs">Five</div>
+    </div>
+</body>
+
+<script type="text/javascript">
+
+    const grids = document.getElementsByClassName("numdivs");
+    const colors = ["crimson", "orange", "lightgreen", "skyblue", "mediumorchid"];
+    let templen = 0;
+
+    for (let grid of grids){
+        // let random_color = colors[Math.floor(Math.random() * colors.length)];
+        let random_color = colors[templen];
+        grid.style.backgroundColor = random_color;
+        templen++;
+        if (templen == colors.length) templen = 0;
+    }
+    
+</script>
+
+</html>
