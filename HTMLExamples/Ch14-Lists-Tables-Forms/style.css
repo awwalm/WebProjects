@@ -1,0 +1,15 @@
+ol {
+    list-style-type: lower-greek;
+}
+
+
+/*code to use any image as list style icon.*/
+ul > li {
+    margin: 10px 0px 0px 0px;
+    padding-left: 20px;
+    background-image: url('http://www.antoniosiber.org/wrong_icosahedra/lopta1.png');
+    list-style: none;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 15px;
+}

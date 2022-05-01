@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
+
+@font-face {
+  font-family: "ChunkFiveRegular";
+  src: url("../fonts/ChunkFiveRegular.otf");
+}
+
+html {
+  font-size: default*2;
+}
+
+* [class=separator] > h1 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif !important;
+}
+
+h1 {
+  font-family: ChunkFiveRegular;
+}
+
+p {
+  font-family: Poppins;
+}
