@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<!-- -->
+
+<html>
+<link rel="stylesheet" type="text/css" href="infoCSS.css" />
+
+<button class="tablink" onclick="displayMenu('aboutMe', this, 'red')" id="defaultOpen">About Me</button>
+<button class="tablink" onclick="displayMenu('contactMe', this, 'green')">Contact Me</button>
+<button class="tablink" onclick="displayMenu('overlay', this, 'blue')">Overlay Image</button>
+<hr>
+
+
+
+<div id="aboutMe" class="tabcontent">
+  <h1>M.A. Mohammed</h1>
+  <h3>Faculty of Science, Technology, Engineering , & Mathematics.</h3>
+  <div class="needTNRFont">
+  <p><em>International University of Malaya-Wales</em></p>
+  <p><em>Kuala Lumpur, Malaysia</em></p><hr>
+</div>
+  <h4 style="margin-bottom: 0.5px;"><b>Favorite quotation:</b></h4><br>
+  <blockquote>
+    <h3><i><q>Cogito ergo sum.</q></i></h3>
+  </blockquote>
+  <p> - René Descartes</p><br><hr>
+  <img src="https://collectionimages.npg.org.uk/large/mw135121/Ren-Descartes.jpg"
+  width="321" height="400" style="position: relative; margin-top: 5px;"><hr>
+</div>
+
+
+
+
+<div id="contactMe" class="tabcontent">
+  <h1>Fill Up The Form To Reach Me</h1><hr>
+
+
+        <form >
+          
+        <div class="container">
+          <label for="phone"><b>Phone Number</b><br>
+          <input type="tel" maxlength="13" id="phoneNum" placeholder="Enter Your Phone Number (no spacing!)" name="phone" pattern="[w]{1}-[0-9]{12}" required="required"><br></label><hr>
+
+          <label for="feedback"><b>Your Feedback</b></label><br>
+          <textarea id="feedBack" placeholder="Give Us A Comment" name="feedback" required="required"></textarea><br>
+              
+          <input type="button" id="submit" value="Submit"> <hr> 
+        </div>
+
+      </form>
+
+
+</div>
+
+<script type="text/javascript">
+  /*the script is 100% needed inside, it won't work externally
+   the HTML interpreter needs to understand which menu to display first*/
+
+function displayMenu(menuName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  } /*we're looping the display sequence iteratively*/
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(menuName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" with the click ALREADY generated
+document.getElementById("defaultOpen").click();
+
+</script>
+
+
+
+<div id="overlay" class="tabcontent">
+  <p id="alsoNeedsMargin"><strong>Thank You For Visiting</strong></p><br><br>
+  
+<div id="overlayContent" class="transparentBox">
+  <img src="https://www.sciencealert.com/images/2017-09/saturn3.jpg" width="700" height="700" id="saturn3" alt="Rings and Tethys (NASA/JPL-Caltech/Space Science Institute)" 
+  style="position: relative; margin-top: 5px; justify-content: center;">
+  <div class="centered" ><br>
+    <h2 id="needsMargin">Feel Free To Come Back</h2>
+    <input type="button" id="lastButton" value="Click Here To Logout" onclick="window.close();">
+    <br>
+    <blockquote id="additionalText">
+      JoinDiaspor* (2017) <cite>Rings and Tethys</cite> , NASA/JPL-Caltech/Space Science Institute    
+    </blockquote>
+  </div>
+
+</div><hr>
+
+</div>
+
+
+
+
+
+<head >
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Info Page</title></head>
+   
+</body> 
+
+<!-- I know what you're thinking - why in tarnation is a head tag inside a body tag???
+      The answer is simple, the tab menus my code is based upon displays the menus at
+      the BOTTOM of the page , hence I had to decieve the HTML interpreter to reposition
+      the elements and display them as usual -->
+</html> 

@@ -1,0 +1,150 @@
+
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+
+  .transparentBox {
+    position: relative;
+  }
+
+  /* Centered text */
+.centered {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body {font-family: "Lato", sans-serif;}
+
+
+/*style for the phone number entry*/
+#phoneNum {
+  padding: 6px 12px 6px 12px;
+  border: solid; border-width: 2.5px;
+  border-color: black; border-radius: 6px;
+  margin-top: 3px; margin-bottom: 3px; 
+  width: 78%;
+  box-sizing: border-box;
+  size: relative;
+}
+
+
+/*style and design for the multi line text*/
+#feedBack {
+  padding: 6px 12px 6px 12px;
+  border: solid; border-width: 2.5px;
+  border-color: black; border-radius: 6px;
+  width: 75%;
+  height: 350px;
+  margin-top: 3px; margin-bottom: 3px; 
+  
+  size: relative;
+}
+
+
+#submit:hover {
+background-color: #665544;
+opacity: 0.5;}
+
+#submit:active {
+background-color: chocolate;}
+
+
+
+input.text {
+color: #cccccc;
+font-size: 12;}
+
+input.text:focus { color: #665544;}
+input #submit:hover {
+background-color: #665544;}
+
+input #submit:active {
+background-color: chocolate;}
+
+input.text {
+color: black;}
+
+input.text:focus { color: #665544;}
+
+#submit {
+ 
+  font-family: Arial, Verdana, sans-serif;
+   background-color: darkgreen;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: solid; border-width: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 33%;
+
+}
+
+#lastButton {
+ 
+  font-family:  "Lato", sans-serif;
+   background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 8px;
+  border: solid; border-width: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 75%;
+
+}
+#lastButton:hover {
+  background-color: darkgrey; 
+  opacity: 0.75;
+}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 33.333333333%;
+}
+
+.tablink:hover {
+  background-color: #777;
+} /**/
+
+/* Style the tab content */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 50px;
+  text-align: center;
+}
+
+/*To display either times new roman or
+computer modern font (the type used in LaTeX)*/
+.needTNRFont {
+  font-family: "CMU Serif", sans-serif;
+  font-size: 20px;
+}
+
+#alsoNeedsMargin {
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+#overlay #alsoNeedsMargin {
+    min-width: 30%;
+    vertical-align: top;
+    padding:10px;
+}
+
+#aboutMe {background-color: #1a1a1a;}
+#contactMe {background-color:#1a1a1a;}/*very dark black...ish... kinda... maybe...but not true black*/
+#overlay {background-color:#1a1a1a;}

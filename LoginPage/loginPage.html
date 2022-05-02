@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<!-- Author : Mohammed Awwal -->
+<!-- Title: Login Page -->
+<!-- Finalized on : Wednesday, 10 April, 2019 -->
+<!-- Course : Web Tech -->
+
+
+<html>
+<head>
+
+  <title>Login Page</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- to allign all elements with device width-->
+
+<link rel="stylesheet" type="text/css" href="loginCSS.css" /> 
+<script type="text/javascript" src="loginJS.js"></script>
+
+
+</head>
+
+<body>
+
+<h2 style="text-align: center;">Login Form</h2>
+
+
+  <form id="myForm" oninvalid="showErrors();">
+    <!-- To make things even more secure, I'm invoking this function
+      immediately the form is encountered by the browser. Reason: I'm still learning. -->
+
+
+      <!-- container for the login image placeholder-->
+  <div class="imgcontainer">
+    <img src="https://achieve.lausd.net/cms/lib/CA01000043/Centricity/domain/779/welligentbuttons/login.png" alt="Login/Logout Image Sample" class="avatar">
+  </div>
+
+  <div class="container">
+    <!-- This is where we house the input fields -->
+
+    <label for="uname"><b>Email</b></label><br>
+    <input type="email" id="emailfield" placeholder="Enter Your Email" name="uname" required="required"><br>
+    <div class="error-message hidden" id="error-message-usnm" style="display: none;"
+   >Username is a required field. Must include "@" and " . " without quotations.
+    </div><br> <!-- I've utilized inline styling here because the JavaScript logic
+    often overrides it in undesired ways - this is for hiding / showing the error message -->
+            
+
+    <label for="psw"><b>Password</b></label><br>
+    <input type="password" id="passfield" maxlength="8" size="8" placeholder="Enter Your Password"
+     name="psw" required="required"><br>
+     <!-- I know you were expecting ` required ` but I'm using
+      ` required = "required" ` because that's what I'm accustomed to. -->
+
+     <div class="error-message" id="error-message-pass" style="display: none;"
+      oninvalid="showErrors();">Password is a required field. Must contain 8 characters: at least 1 numeric character, 1 uppercase, 1 lowercase, or special character. </div><br>
+      <!-- The same idea is reflected here again for the password error message. -->
+            
+        
+    <input type="button" class="buttclass" id="loginbutton" onclick="check(this.form)" value="Login"/>
+    <!-- Login button with a form checking function attached to validate input upon clicking -->
+    <input type="reset" value="Reset" id="resetbutton" class="buttclass" onclick="document.getElementById('namefield').value = '' ; document.getElementById('emailfield').value = '';">
+    <!-- Even though "input type='reset' " would the job, I included the document.getElementById()
+       function for security measures. Reason: I'm still learning to develop safer systems. -->
+
+   
+  </div>
+
+
+</form>
+
+
+
+</body>
+
+<footer>
+<div id="footer" onmouseover="mouseover()" onmouseout="mouseout()">
+  <!-- This is my best professional effort for adding an animated function to make 
+      my digital signature footnote appear and go transparent on mouse hover. -->
+  <p>
+    
+    <div class="footStyle">
+
+    <h4>BCE 509 - Individual Assignment</h4>
+    <p class="lead"><strong><h4>Course Lecturer: Mr. Ridzuan</h4></strong></p>
+    <strong><h4>&copy; 2019 Awwal Mohammed</h4></strong>
+  </div>
+
+  </p>
+</div>
+</footer>
+
+
+</html>
