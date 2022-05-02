@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<title>BCE509 - MIDTERM EXAM</title>
+<style>
+
+    /*WRITE YOUR CSS HERE !*/
+    img{
+        width: 8%;
+    }
+
+</style>
+<body>
+
+<!-- HEADER : THIS TEXT MUST BE FORMATTED BASED ON THE FOLLOWING CRITERIA.
+        - FONT ARIAL
+        - NO MARGIN
+        - ALIGN CENTER
+-->
+<h1 style="font-family: Arial; margin-left: 0%; 
+		   margin-right: 0%; text-align: center; ">
+
+BCE509 WEB TECHNOLOGY - MATCHING GAME
+
+</h1>
+
+<!-- Image Grid :
+        - Arrange all this images in 4 x 3 grid
+        - Alignment centre
+        - Margin top between rows 12px
+        - You may add other HTML tags, attribute, style, etc where applicable
+-->
+
+<div class="masterGrid" style="display: block; text-align: center; border: solid; border-width: 6px; border-color: grey; border-radius: 8px; margin-right: 10%; margin-left: 10%; margin-bottom: 2%;">
+
+<div id="firstrid" style="margin-top: 12px;">
+<img id="img1" src="clickme.jpeg" onclick="setAttribute('src', 'pic1.jpg'); star.push('pic1'); matcher();">
+<img id="img2" src="clickme.jpeg" onclick="setAttribute('src', 'pic3.jpg'); star.push('pic3'); matcher();">
+<img id="img3" src="clickme.jpeg" onclick="setAttribute('src', 'pic6.jpg'); star.push('pic6'); matcher();">
+<img id="img4" src="clickme.jpeg" onclick="setAttribute('src', 'pic5.jpg'); star.push('pic5'); matcher();">
+</div>
+
+<div id="secondGrid" style="margin-top: 12px;">
+<img id="img5" src="clickme.jpeg" onclick="setAttribute('src', 'pic2.jpg'); star.push('pic2'); matcher();">
+<img id="img6" src="clickme.jpeg" onclick="setAttribute('src', 'pic2.jpg'); star.push('pic2'); matcher();">
+<img id="img7" src="clickme.jpeg" onclick="setAttribute('src', 'pic4.jpg'); star.push('pic4'); matcher();">
+<img id="img8" src="clickme.jpeg" onclick="setAttribute('src', 'pic6.jpg'); star.push('pic6'); matcher();">
+</div>
+
+<div id="thirdGrid" style="margin-top: 12px; margin-bottom: 12px;">
+<img id="img9" src="clickme.jpeg" onclick="setAttribute('src', 'pic4.jpg'); star.push('pic4'); matcher();">
+<img id="img10" src="clickme.jpeg" onclick="setAttribute('src', 'pic1.jpg'); star.push('pic1'); matcher();">
+<img id="img11" src="clickme.jpeg" onclick="setAttribute('src', 'pic5.jpg'); star.push('pic5'); matcher();">
+<img id="img12" src="clickme.jpeg" onclick="setAttribute('src', 'pic3.jpg'); star.push('pic3'); matcher();">
+</div>
+
+<style type="text/css">
+	img {
+		width: 15%;
+		height: 15%;
+		max-width: 60%
+		max-height: 60%;
+	}
+</style>
+
+</div>
+
+<!-- FOOTER :
+     - FONT ARIAl, ALIGN CENTRE, NO MARGIN,
+     - START OF GAME - THIS 2 MESSAGES WILL NOT BE DISPLAYED
+     - WHEN GAME STARTS (AFTER 1st CLICK) - DISPLAY ONLY 1 - MATCH or NOT MATCH
+-->
+<h1 id="matchMsg" style="font-family: Arial; text-align: center; margin: 0%; display: none;">MATCH</h1>
+<h1 id="notMatchMsg" style="font-family: Arial; text-align: center; margin: 0%; display: none;">NOT MATCH</h1>
+
+<script>
+    
+    var star = new Array();
+
+    function reloadGame() {
+    	location.reload();
+    }
+
+    function matcher(){
+    if (star.length >= 2) {
+    	 if(star[0] == star[1]){
+    	
+    					document.getElementById('matchMsg').style.display = 'block';
+    					setTimeout(reloadGame, 1500);
+    					alert(`MATCH! You've won!. Reloading Game...`);
+    					
+    					
+    				}
+    				else {
+    					document.getElementById('notMatchMsg').style.display = 'block';
+    					setTimeout(reloadGame, 1500);
+    					alert('NOT MATCH. Try again. Reloading Game...');
+    					
+    				}
+    			
+    	
+    }
+}
+
+</script>
+
+</body>
+</html>
