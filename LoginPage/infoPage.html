@@ -10,7 +10,7 @@
 <button class="tablink" onclick="displayMenu('overlay', this, 'blue')">Overlay Image</button>
 <hr>
 
-
+<body>
 
 <div id="aboutMe" class="tabcontent">
   <h1>M.A. Mohammed</h1>
@@ -39,7 +39,8 @@
           
         <div class="container">
           <label for="phone"><b>Phone Number</b><br>
-          <input type="tel" maxlength="13" id="phoneNum" placeholder="Enter Your Phone Number (no spacing!)" name="phone" pattern="[w]{1}-[0-9]{12}" required="required"><br></label><hr>
+          <input type="tel" maxlength="13" id="phoneNum" placeholder="Enter Your Phone Number (no spacing!)"
+           name="phone" pattern="[w]{1}-[0-9]{12}" required="required"><br></label><hr>
 
           <label for="feedback"><b>Your Feedback</b></label><br>
           <textarea id="feedBack" placeholder="Give Us A Comment" name="feedback" required="required"></textarea><br>
@@ -81,14 +82,15 @@ document.getElementById("defaultOpen").click();
   <p id="alsoNeedsMargin"><strong>Thank You For Visiting</strong></p><br><br>
   
 <div id="overlayContent" class="transparentBox">
-  <img src="https://www.sciencealert.com/images/2017-09/saturn3.jpg" width="700" height="700" id="saturn3" alt="Rings and Tethys (NASA/JPL-Caltech/Space Science Institute)" 
+  <img src="https://www.sciencealert.com/images/2017-09/saturn3.jpg" width="700" 
+  height="700" id="saturn3" alt="Rings and Tethys (NASA/JPL-Caltech/Space Science Institute)" 
   style="position: relative; margin-top: 5px; justify-content: center;">
   <div class="centered" ><br>
     <h2 id="needsMargin">Feel Free To Come Back</h2>
     <input type="button" id="lastButton" value="Click Here To Logout" onclick="window.close();">
     <br>
     <blockquote id="additionalText">
-      JoinDiaspor* (2017) <cite>Rings and Tethys</cite> , NASA/JPL-Caltech/Space Science Institute    
+      <small>JoinDiaspor* (2017) <cite>Rings and Tethys</cite> , NASA/JPL-Caltech/Space Science Institute</small>    
     </blockquote>
   </div>
 
